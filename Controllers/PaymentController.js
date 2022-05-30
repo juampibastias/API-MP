@@ -7,9 +7,6 @@ class PaymentController {
 
     try {
       const payment = await this.subscriptionService.createPayment(req, res);
-
-
-
       return payment.init_point;
     } catch (error) {
       console.log(error);

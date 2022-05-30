@@ -19,14 +19,6 @@ router.get('/payment', function (req, res, next) {
 });
 
 router.post('/payment', async function (req, res, next) {
-  // PaymentInstance.getPaymentLink(req.body.data, res);
-  // res.json(prueba);
-  // res.json({
-  //   linkpago: "hola",
-  //   data: prueba
-  // })
-
-  // console.log(await PaymentInstance.getPaymentLink(req.body.data))
   res.json({
     linkpago: "hola",
     data: await PaymentInstance.getPaymentLink(req.body.data)

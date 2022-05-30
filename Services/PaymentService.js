@@ -13,9 +13,14 @@ class PaymentService {
         title: req.title,
         quantity: req.quantity,
         unit_price: req.price
-      }, ],
+      },{
+        title: req.title,
+        quantity: req.quantity,
+        unit_price: req.price
+      },],
+      
       back_urls: {
-        success: "https://www.success.com",
+        success: "http://localhost:3000/order/",
         failure: "https://www.failure.com",
         pending: "https://www.pending.com",
       },
