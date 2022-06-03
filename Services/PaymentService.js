@@ -1,7 +1,5 @@
 const axios = require("axios");
-const {
-  redirect
-} = require("express/lib/response");
+
 
 class PaymentService {
   async createPayment(req, res) {
@@ -9,31 +7,22 @@ class PaymentService {
     const body = {
 
       payer_email: "test_user_11567634@testuser.com",
-      items: [{
-        title: req.title,
-        quantity: req.quantity,
-        unit_price: req.price
-      },{
-        title: req.title,
-        quantity: req.quantity,
-        unit_price: req.price
-      },],
+      items: req,
+      
       
       back_urls: {
-        success: "http://localhost:3000/order/",
+        success: "http://localhost:3000/order",
         failure: "https://www.failure.com",
-        pending: "https://www.pending.com",
+        pending: "https://www.pending.com", 
       },
     };
-
+    
     const payment = await axios.post(url, body, {
       headers: {
         "Content-type": "application/json",
         Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       },
     })
-
-
 
     return payment.data;
 
