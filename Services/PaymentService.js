@@ -11,7 +11,7 @@ class PaymentService {
       
       
       back_urls: {
-        success: "http://localhost:3000/order",
+        success: "https://www.success.com",
         failure: "https://www.failure.com",
         pending: "https://www.pending.com", 
       },
