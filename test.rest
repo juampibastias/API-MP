@@ -1,9 +1,0 @@
-POST http://localhost:3001/payment
-content-type: application/json
-
-items: 
-        [{
-          title: "sopa",
-          quantity: 1,
-          unit_price: 1000,
-        }]
