@@ -11,9 +11,9 @@ class PaymentService {
       
       
       back_urls: {
-        success: "http://localhost:3000/profile",
-        failure: "http://localhost:3000/failurePage",
-        pending: "http://localhost:3000/pendingPage", 
+        success: "https://access-virtual-tienda.herokuapp.com/profile",
+        failure: "https://access-virtual-tienda.herokuapp.com/failurePage",
+        pending: "https://access-virtual-tienda.herokuapp.com/pendingPage", 
       },
     };
     
