@@ -6,14 +6,13 @@ class PaymentService {
     const url = "https://api.mercadopago.com/checkout/preferences";
     const body = {
 
-      payer_email: "test_user_11567634@testuser.com",
       items: req,
       
       
       back_urls: {
-        success: "https://access-virtual-tienda.herokuapp.com/profile",
-        failure: "https://access-virtual-tienda.herokuapp.com/failurePage",
-        pending: "https://access-virtual-tienda.herokuapp.com/pendingPage", 
+        success: "http://localhost:3000/profile",
+        failure: "http://localhost:3000/failurePage",
+        pending: "http://localhost:3000/pendingPage", 
       },
     };
     
